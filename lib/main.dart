@@ -4,6 +4,8 @@ import 'package:satu/features/authentication/login/controllers/login_controller.
 import 'package:satu/features/authentication/login/screens/login_screen.dart';
 import 'package:satu/features/authentication/signup/signup_screen.dart';
 import 'package:satu/repository/authentication_repository.dart';
+import 'package:satu/screens/profile.dart';
+import 'package:satu/screens/stopwatch.dart';
 
 import 'screens/homepage.dart';
 
@@ -19,9 +21,9 @@ class CountUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: StopwatchPage(),
     );
   }
 }
