@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:satu/repository/authentication_repository.dart';
 
 class LoginController extends GetxController {
   // final AuthenticationRepository authenticationRepository = Get.find();

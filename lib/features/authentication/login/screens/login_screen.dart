@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:satu/features/authentication/login/controllers/login_controller.dart';
-import '../../../../screens/homepage.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
