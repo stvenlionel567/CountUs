@@ -1,8 +1,9 @@
-// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
+//ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:satu/features/authentication/login/controllers/login_controller.dart';
+import 'package:satu/screens/homepage.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -128,6 +129,10 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                         // loginController.signIn(loginController.emailController.text,
                         //     loginController.passwordController.text);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0XFF011F6B),
@@ -181,4 +186,4 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-}
+} 

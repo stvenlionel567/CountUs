@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StopwatchPage extends StatefulWidget {
+  const StopwatchPage({super.key});
+
   @override
   _StopwatchPageState createState() => _StopwatchPageState();
 }
@@ -12,7 +14,7 @@ class StopwatchPage extends StatefulWidget {
 class _StopwatchPageState extends State<StopwatchPage> {
   late Stopwatch _stopwatch;
   late Timer _timer;
-  List<String> _lapTimes = [];
+  final List<String> _lapTimes = [];
   String displayTime = "00:00:00:00";
 
   @override

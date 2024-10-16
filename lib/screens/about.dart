@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:satu/features/authentication/login/screens/login_screen.dart';
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
@@ -10,7 +8,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/homepage.png'),
           fit: BoxFit.cover,
@@ -29,13 +27,11 @@ class AboutPage extends StatelessWidget {
                   color: Colors.white),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Text(
-                "Count Us provide you with variant features that help user to do all their activities within this app",
+                "Count Us provides you with variant features that help users to do all their activities within this app.",
                 style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: Colors.white,
@@ -46,7 +42,7 @@ class AboutPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Text(
-                "Newest Update (1.1.2) :",
+                "Newest Update (1.1.2):",
                 style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: Colors.white,
@@ -54,7 +50,7 @@ class AboutPage extends StatelessWidget {
                 textAlign: TextAlign.justify,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Column(
@@ -68,7 +64,7 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Click “Try it now!” to access stopwatch features. To start the time click “start” button in the middle also you kan track the record by click the “mark” button on the right. To restart the timer, you can click the “restart” button on the left.",
+                    "Click “Try it now!” to access stopwatch features. To start the time click the “start” button in the middle; you can track the record by clicking the “mark” button on the right. To restart the timer, you can click the “restart” button on the left.",
                     style: GoogleFonts.poppins(
                       fontSize: 12,
                       color: Colors.white,
@@ -78,7 +74,7 @@ class AboutPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Column(
@@ -92,7 +88,7 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "This features allows user to add their favorite news media. So, they can find it easily in the future.",
+                    "This feature allows users to add their favorite news media. So, they can find it easily in the future.",
                     style: GoogleFonts.poppins(
                       fontSize: 12,
                       color: Colors.white,
@@ -102,20 +98,25 @@ class AboutPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 50,
-            ),
+            const SizedBox(height: 50),
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 149, 0, 0),
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    "Log out",
-                    style: GoogleFonts.poppins(color: Colors.white),
-                  )),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 149, 0, 0),
+                ),
+                onPressed: () {
+                  // Navigasi ke halaman login
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  );
+                },
+                child: Text(
+                  "Log out",
+                  style: GoogleFonts.poppins(color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),

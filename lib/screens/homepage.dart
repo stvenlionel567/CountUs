@@ -101,7 +101,7 @@ class HomeScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
-                          "Hi, Mr Lionel", //nanti namanya ini disesuain sama usernamenya pas daftar atau klo gabisa apus aja gapapa io
+                          "Hi, Mr Lionel", //nanti namanya ini disesuain sama usernamenya pas daftar atau klo gabisa apus aja gapapa io, jadi dia yang kek lempar parameter gituu io kek praktikum kemaren
                           style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 18,
@@ -230,8 +230,10 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30, 
                 ),
+
+                // sumpahh gatauu gimanaa yak favoritenyaaa ioo hiksss
                 Text("My Favourite",
                     style: GoogleFonts.poppins(
                         color: Colors.white,
@@ -275,6 +277,9 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
+
+                // ini datanya dah ada di txt tapi coba generate aja dari gpt bisa ga yaaa
+                // klo lu bingung mintol lutpiii iooo
                 SizedBox(
                   child: Text("E-Learning Sites",
                       style: GoogleFonts.poppins(

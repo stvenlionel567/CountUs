@@ -1,19 +1,17 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:satu/features/authentication/login/controllers/login_controller.dart';
 import 'package:satu/features/authentication/login/screens/login_screen.dart';
-import 'package:satu/features/authentication/signup/signup_screen.dart';
-import 'package:satu/repository/authentication_repository.dart';
-import 'package:satu/screens/profile.dart';
-import 'package:satu/screens/stopwatch.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-import 'screens/homepage.dart';
 
-void main() {
+
+void main()  {
+ 
   runApp(const CountUs());
 
-  Get.lazyPut(() => LoginController());
-  // Get.lazyPut(() => AuthenticationRepository());
 }
 
 class CountUs extends StatelessWidget {
@@ -23,7 +21,8 @@ class CountUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StopwatchPage(),
+      home: LoginScreen(),
     );
   }
 }
+

@@ -1,7 +1,21 @@
+buildscript {
+    ext.kotlin_version = '1.9.0' 
+    repositories {
+        google() // Repositori untuk plugin Google
+        mavenCentral() // Repositori untuk dependensi lainnya
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0' // Sesuaikan dengan versi terbaru
+        classpath 'com.google.gms:google-services:4.3.15' // Versi plugin Google Services
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        google() // Pastikan repositori Google ada
+        mavenCentral() // Pastikan repositori Maven Central ada
     }
 }
 
